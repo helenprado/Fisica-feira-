@@ -1,254 +1,90 @@
-html_content = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpticTech - O Blog da Fibra Ótica e Telecomunicações</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tecnologia de Fibra Óptica</title>
 </head>
 <body>
 
     <header>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-icon"></span>
-                OpticTech
-            </a>
-            <ul class="nav-links">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">FTTH & GPON</a></li>
-                <li><a href="#">Equipamentos</a></li>
-                <li><a href="#">Fusão & Testes</a></li>
-                <li><a href="#">Guias Práticos</a></li>
-            </ul>
-            <button class="btn-subscribe">Assinar Blog</button>
-        </div>
+        <h1>Arquitetura e Física da Fibra Óptica</h1>
+        <p class="subtitle">Especificações Técnicas de Transmissão Guiada por Luz</p>
     </header>
 
-    <section class="hero">
-        <h1>Explorando o Futuro da <span>Fibra Ótica</span></h1>
-        <p>Tutoriais avançados, engenharia de telecomunicações, testes de rede e as últimas inovações em transmissão fotônica de dados.</p>
-        <div class="pulse-line"></div>
-    </section>
-
-    <main class="main-container">
-        
-        <div class="content-area">
+    <main>
+        <section>
+            <strong class="section-title">1. Princípio Físico de Funcionamento</strong>
+            <p>A transmissão baseia-se no fenômeno da <strong>Reflexão Interna Total</strong>. O sinal óptico é confinado no núcleo da fibra devido ao salto no índice de refração em relação à casca externa, permitindo a propagação por longas distâncias com perdas mínimas.</p>
             
-            <article class="featured-card">
-                <div class="featured-img">
-                    <svg width="220" height="180" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="100" cy="80" r="60" stroke="#1e293b" stroke-width="8"/>
-                        <circle cx="100" cy="80" r="40" stroke="#00f2fe" stroke-width="4" filter="drop-shadow(0px 0px 8px #00f2fe)"/>
-                        <circle cx="100" cy="80" r="18" fill="#4facfe"/>
-                        <circle cx="100" cy="80" r="6" fill="#ffffff" filter="drop-shadow(0px 0px 10px #ffffff)"/>
-                        <path d="M20 80 Q 60 20, 100 80 T 180 80" stroke="url(#cyan-grad)" stroke-width="3" fill="none"/>
-                        <defs>
-                            <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#00f2fe"/>
-                                <stop offset="100%" stop-color="#7f00ff"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <span class="featured-badge">Destaque da Semana</span>
-                </div>
-                <div class="featured-content">
-                    <div class="featured-meta">
-                        <span>Por Eng. Carlos Silva</span> • <span>12 de Agosto, 2026</span> • <span>8 min de leitura</span>
-                    </div>
-                    <h2 class="featured-title">Tecnologia DWDM: Como Multiplicar a Capacidade da Fibra Existente sem Lançar Novos Cabos</h2>
-                    <p class="featured-desc">A multiplexação por divisão de comprimento de onda (DWDM) revolucionou o backbone da internet mundial. Entenda o funcionamento dos transponders, amplificadores EDFA e como transportar Terabits por segundo em uma única casca de vidro.</p>
-                    <a href="#" style="color: var(--accent-cyan); font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
-                        Ler Artigo Completo &rarr;
-                    </a>
-                </div>
-            </article>
-
-            <h3 class="section-title">Últimos Artigos Publicados</h3>
-            
-            <div class="articles-grid">
-                
-                <article class="article-card">
-                    <div class="card-img-placeholder">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-                        </svg>
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag">Fusão de Fibra</span>
-                        <h4 class="card-title">Guia Definitivo para Clivagem e Fusão com Atenuação Quase Zero</h4>
-                        <p class="card-excerpt">Aprenda a realizar a manutenção correta da máquina de fusão, limpeza dos eletrodos e o uso preciso do clivador de precisão.</p>
-                        <div class="card-footer">
-                            <span>09 Aug 2026</span>
-                            <span>5 min leitura</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="card-img-placeholder">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#4facfe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag">Medição & Testes</span>
-                        <h4 class="card-title">Interpretação de Curvas OTDR: Identificando Eventos Reflexivos e Não-Reflexivos</h4>
-                        <p class="card-excerpt">Como identificar conectores com sujeira, curvaturas acentuadas (macrobending) e pontos de rompimento através da reflectometria.</p>
-                        <div class="card-footer">
-                            <span>05 Aug 2026</span>
-                            <span>7 min leitura</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="card-img-placeholder">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#7f00ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                        </svg>
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag">Arquitetura FTTH</span>
-                        <h4 class="card-title">Evolução GPON para XGS-PON: Preparando o Provedor para 10 Gbps Simétricos</h4>
-                        <p class="card-excerpt">Mapeamento de convivência de comprimentos de onda (WDM1r) para migrar clientes da OLT GPON tradicional sem interromper o sinal.</p>
-                        <div class="card-footer">
-                            <span>01 Aug 2026</span>
-                            <span>6 min leitura</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="card-img-placeholder">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag">Submarino</span>
-                        <h4 class="card-title">Como funcionam os Cabos Submarinos Intercontinentais de Fibra Ótica</h4>
-                        <p class="card-excerpt">A incrível engenharia por trás do isolamento, alimentação elétrica de repetidores e proteção contra ancoragens no fundo dos oceanos.</p>
-                        <div class="card-footer">
-                            <span>28 Jul 2026</span>
-                            <span>10 min leitura</span>
-                        </div>
-                    </div>
-                </article>
-
+            <div class="tech-box">
+                <strong>Condição Geométrica (Lei de Snell):</strong> O índice de refração do núcleo (<i>n₁</i>) deve ser estritamente maior que o da casca (<i>n₂</i>). A luz deve incidir com ângulo superior ao ângulo crítico (<i>θc = arcsin(n₂ / n₁)</i>).
             </div>
-        </div>
+        </section>
 
-        <aside class="sidebar">
-            
-            <div class="widget newsletter-box">
-                <h4 class="widget-title">Newsletter Técnica</h4>
-                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">Receba novidades sobre redes ópticas, lançamentos de equipamentos e tutoriais diretamente no seu e-mail.</p>
-                <form onsubmit="event.preventDefault(); alert('Obrigado por se inscrever!');">
-                    <input type="email" placeholder="seu.email@provedor.com.br" required>
-                    <button type="submit">Inscrever-se Grátis</button>
-                </form>
-            </div>
+        <section>
+            <strong class="section-title">2. Camadas Estruturais do Cabo</strong>
+            <ul>
+                <li><strong>Núcleo (Core):</strong> Filamento vítreo de sílica de alta pureza (SiO₂) por onde viajam os fótons. Diâmetro entre 8 a 62,5 micrômetros (µm).</li>
+                <li><strong>Casca (Cladding):</strong> Camada dielétrica que envolve o núcleo com menor índice de refração, garantindo o confinamento da luz.</li>
+                <li><strong>Revestimento Primário (Buffer Coating):</strong> Proteção polimérica contra umidade, estresse mecânico e microcurvaturas.</li>
+                <li><strong>Elementos de Armadura:</strong> Fios de Kevlar e capas externas em PVC/LSZH para resistência estrutural e retardamento de chama.</li>
+            </ul>
+        </section>
 
-            <div class="widget">
-                <h4 class="widget-title">Tópicos Populares</h4>
-                <div class="tag-cloud">
-                    <a href="#" class="tag">FTTH</a>
-                    <a href="#" class="tag">GPON</a>
-                    <a href="#" class="tag">OTDR</a>
-                    <a href="#" class="tag">DWDM</a>
-                    <a href="#" class="tag">Monomodo (SM)</a>
-                    <a href="#" class="tag">Multimodo (MM)</a>
-                    <a href="#" class="tag">Clivagem</a>
-                    <a href="#" class="tag">Power Meter</a>
-                    <a href="#" class="tag">XGS-PON</a>
-                    <a href="#" class="tag">Passagem Aérea</a>
-                </div>
-            </div>
+        <section>
+            <strong class="section-title">3. Comparativo Técnico: Monomodo vs. Multimodo</strong>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parâmetro</th>
+                        <th>Monomodo (SMF)</th>
+                        <th>Multimodo (MMF)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diâmetro do Núcleo</td>
+                        <td>8 a 10 µm</td>
+                        <td>50 a 62,5 µm</td>
+                    </tr>
+                    <tr>
+                        <td>Modos de Propagação</td>
+                        <td>1 modo (Sem dispersão modal)</td>
+                        <td>Múltiplos caminhos fotônicos</td>
+                    </tr>
+                    <tr>
+                        <td>Fonte Emissora</td>
+                        <td>Laser (Diodos DFB/FP)</td>
+                        <td>LED / VCSEL</td>
+                    </tr>
+                    <tr>
+                        <td>Banda Passante</td>
+                        <td>Praticamente ilimitada</td>
+                        <td>Limitada pela dispersão modal</td>
+                    </tr>
+                    <tr>
+                        <td>Aplicação Típica</td>
+                        <td>Backbones WAN, FTTH, Longo Alcance</td>
+                        <td>Data Centers e Redes Locais (LAN)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-            <div class="widget">
-                <h4 class="widget-title">Parâmetros de Referência</h4>
-                <ul class="stats-list">
-                    <li class="stats-item">
-                        <span>Atenuação 1310 nm</span>
-                        <span class="stats-value">~0.35 dB/km</span>
-                    </li>
-                    <li class="stats-item">
-                        <span>Atenuação 1550 nm</span>
-                        <span class="stats-value">~0.20 dB/km</span>
-                    </li>
-                    <li class="stats-item">
-                        <span>Perda Máx. por Fusão</span>
-                        <span class="stats-value">&lt; 0.05 dB</span>
-                    </li>
-                    <li class="stats-item">
-                        <span>Perda Conector SC/APC</span>
-                        <span class="stats-value">&lt; 0.30 dB</span>
-                    </li>
-                    <li class="stats-item">
-                        <span>Velocidade da Luz no Vidro</span>
-                        <span class="stats-value">~200.000 km/s</span>
-                    </li>
-                </ul>
-            </div>
-
-        </aside>
-
+        <section>
+            <strong class="section-title">4. Parâmetros de Desempenho do Sinal</strong>
+            <ul>
+                <li><strong>Atenuação (dB/km):</strong> Perda de intensidade do sinal provocada por espalhamento Rayleigh e absorção do material. Medida nas janelas de 1310 nm e 1550 nm.</li>
+                <li><strong>Dispersão Cromática:</strong> Alargamento temporal do pulso óptico devido a diferentes frequências viajando a velocidades ligeiramente distintas.</li>
+                <li><strong>Imunidade Eletromagnética (EMI):</strong> Por ser um meio dieletrico (não metálico), é imune a ruídos elétricos, descargas atmosféricas e indução magnética.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <div class="logo" style="margin-bottom: 1rem;">
-                    <span class="logo-icon"></span>
-                    OpticTech
-                </div>
-                <p style="font-size: 0.88rem; color: var(--text-muted);">Portal especializado em tecnologia de infraestrutura óptica, engenharia de telecomunicações e redes de alta velocidade.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Artigos Recentes</a></li>
-                    <li><a href="#">Calculadora de Atenuação</a></li>
-                    <li><a href="#">Sobre os Autores</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Categorias</h4>
-                <ul>
-                    <li><a href="#">Redes FONT / FTTH</a></li>
-                    <li><a href="#">Instrumentação e Medidas</a></li>
-                    <li><a href="#">Projetos de Backhaul</a></li>
-                    <li><a href="#">Normas Técnicas (NBR/ITU-T)</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contato & Redes</h4>
-                <ul>
-                    <li><a href="#">contato@optictech.com.br</a></li>
-                    <li><a href="#">LinkedIn / OpticTech</a></li>
-                    <li><a href="#">YouTube / Canal da Fibra</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2026 OpticTech Blog. Todos os direitos reservados.
-        </div>
+        Documentação Técnica — Sistemas de Comunicação Óptica
     </footer>
 
 </body>
 </html>
-"""
-
-with open("blog_fibra_otica.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
-
-print("HTML file created successfully: blog_fibra_otica.html")
